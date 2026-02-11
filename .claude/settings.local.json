@@ -10,7 +10,10 @@
       "Bash(cmd /c \"claude mcp add figma --transport sse http://127.0.0.1:3845/mcp\")",
       "Bash(cmd /c \"claude mcp add --help\")",
       "Bash(npx next build:*)",
-      "Bash(git ls-tree:*)"
+      "Bash(git ls-tree:*)",
+      "Bash(gh api:*)",
+      "WebFetch(domain:valentine-idea-g1etk24l6-ghosteks-projects.vercel.app)",
+      "WebFetch(domain:valentine-idea.vercel.app)"
     ]
   }
 }
