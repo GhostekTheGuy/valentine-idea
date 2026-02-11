@@ -284,33 +284,11 @@ export default function Home() {
         {showLove && (
           <motion.section
             id="love-section"
-            className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-[24rem] mt-40px  3xl:pt-[60rem] pb-32 md:pb-44 3xl:pb-56"
+            className="relative min-h-screen flex flex-col items-center justify-end px-6 pb-32 md:pb-44 3xl:pb-56"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2 }}
           >
-            {/* Decorative heart — top-right */}
-            <motion.div
-              className="absolute top-10 right-6 md:top-16 md:right-16 text-[#F0EDE6]/40 pointer-events-none"
-              style={{ rotate: "42deg" }}
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.6, type: "spring", stiffness: 200 }}
-            >
-              <HeartSvg size={70} />
-            </motion.div>
-
-            {/* Decorative heart — bottom-left */}
-            <motion.div
-              className="absolute bottom-28 left-4 md:bottom-36 md:left-12 text-[#F0EDE6]/40 pointer-events-none"
-              style={{ rotate: "-27deg" }}
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.8, type: "spring", stiffness: 200 }}
-            >
-              <HeartSvg size={60} />
-            </motion.div>
-
             {/* "My love" heading image */}
             <motion.div
               className="mb-8 md:mb-12 pulse-gentle"
@@ -339,23 +317,10 @@ export default function Home() {
                 alt="My love"
                 width={1000}
                 height={800}
-                className="w-80 md:w-[500px] lg:w-[600px] h-auto"
+                className="w-[40rem] md:w-[1000px] lg:w-[1200px] h-auto"
               />
             </motion.div>
 
-            {/* Bottom decorative hearts row */}
-            <motion.div
-              className="flex gap-4 mt-12 text-[#F0EDE6]/20 pointer-events-none"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.2, duration: 1 }}
-            >
-              <HeartSvg size={24} />
-              <HeartSvg size={32} />
-              <HeartSvg size={20} />
-              <HeartSvg size={28} />
-              <HeartSvg size={22} />
-            </motion.div>
           </motion.section>
         )}
       </AnimatePresence>
