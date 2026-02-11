@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --breakpoint-3xl: 1440px;
+  --animate-shimmer-slide: shimmer-slide var(--speed) ease-in-out infinite alternate;
+  --animate-spin-around: spin-around calc(var(--speed) * 2) infinite linear;
+}
+
+@keyframes shimmer-slide {
+  to { transform: translateX(100cqw); }
+}
+
+@keyframes spin-around {
+  0% { transform: translateZ(0) rotate(0); }
+  15%, 35% { transform: translateZ(0) rotate(90deg); }
+  65%, 85% { transform: translateZ(0) rotate(270deg); }
+  100% { transform: translateZ(0) rotate(360deg); }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #120206;
+  overflow-x: hidden;
+}
+
+/* Floating hearts animation */
+.floating-heart {
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  color: #ff6b8a;
+  opacity: 0;
+  animation: float-up var(--duration) var(--delay) linear infinite;
+  left: var(--x);
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(100vh) rotate(0deg) scale(var(--scale));
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.12;
+  }
+  85% {
+    opacity: 0.12;
+  }
+  100% {
+    transform: translateY(-80px) rotate(720deg) scale(var(--scale));
+    opacity: 0;
+  }
+}
+
+/* Pulse animation for love text */
+@keyframes gentle-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+.pulse-gentle {
+  animation: gentle-pulse 3s ease-in-out infinite;
+}
+
+/* Vignette overlay */
+.vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 40%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+}
+
