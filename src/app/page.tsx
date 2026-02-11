@@ -161,7 +161,7 @@ export default function Home() {
       </AnimatePresence>
 
       {/* ═══════════ SECTION 1 — Question ═══════════ */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center gap-10 md:gap-14 px-6 pb-64 md:pb-88 3xl:pb-112">
+      <section className="relative min-h-screen flex flex-col items-center justify-center gap-6 md:gap-14 px-6 pb-28 md:pb-88 3xl:pb-112">
         {/* Smoke texture overlay */}
         <div
           className="absolute inset-0 opacity-[0.06] mix-blend-overlay pointer-events-none"
@@ -208,7 +208,7 @@ export default function Home() {
 
         {/* Question text */}
         <motion.div
-          className="relative z-20 text-center mt-16 md:mt-0"
+          className="relative z-20 text-center mt-8 md:mt-0"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.2 }}
@@ -275,7 +275,7 @@ export default function Home() {
           alt=""
           width={1280}
           height={400}
-          className="w-full h-auto relative -translate-y-1/2"
+          className="w-[300%] max-w-none md:w-full h-auto relative -translate-y-1/2 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0"
         />
       </div>
 
@@ -284,14 +284,14 @@ export default function Home() {
         {showLove && (
           <motion.section
             id="love-section"
-            className="relative min-h-screen flex flex-col items-center justify-end px-6 pb-32 md:pb-44 3xl:pb-56"
+            className="relative min-h-screen flex flex-col items-center justify-end px-4 md:px-6 pb-16 md:pb-44 3xl:pb-56"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2 }}
           >
             {/* "My love" heading image */}
             <motion.div
-              className="mb-8 md:mb-12 pulse-gentle"
+              className="mb-4 md:mb-12 pulse-gentle"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.9 }}
@@ -301,7 +301,7 @@ export default function Home() {
                 alt="My love"
                 width={800}
                 height={200}
-                className="w-64 md:w-96 lg:w-[500px] h-auto"
+                className="w-80 md:w-96 lg:w-[500px] h-auto"
               />
             </motion.div>
 
@@ -317,7 +317,7 @@ export default function Home() {
                 alt="My love"
                 width={1000}
                 height={800}
-                className="w-[40rem] md:w-[1000px] lg:w-[1200px] h-auto"
+                className="w-[260vw] max-w-none md:w-[800px] lg:w-[960px] h-auto"
               />
             </motion.div>
 
