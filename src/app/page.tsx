@@ -161,7 +161,7 @@ export default function Home() {
       </AnimatePresence>
 
       {/* ═══════════ SECTION 1 — Question ═══════════ */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center gap-10 md:gap-14 px-6">
+      <section className="relative min-h-screen flex flex-col items-center justify-center gap-10 md:gap-14 px-6 pb-64 md:pb-88 3xl:pb-112">
         {/* Smoke texture overlay */}
         <div
           className="absolute inset-0 opacity-[0.06] mix-blend-overlay pointer-events-none"
@@ -284,7 +284,7 @@ export default function Home() {
         {showLove && (
           <motion.section
             id="love-section"
-            className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-40 md:pt-52 3xl:pt-104 pb-20 3xl:pb-40"
+            className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-[24rem] mt-40px  3xl:pt-[60rem] pb-32 md:pb-44 3xl:pb-56"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2 }}
